@@ -12,12 +12,33 @@ label {
   color: var(--text-secondary);
   display: block;
   margin-bottom: .25rem;
-}
-
+} 
 input:focus,
 select:focus,
 textarea:focus {
   outline: .25rem solid var(--surface-secondary);
   border: .125rem solid var(--stroke-hightlight);
   outline-offset: .1px; /* Hack para funcionar no safari o "border" acima */
+}
+input[type="date"] {
+  position: relative;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+    &::before {
+    content: "";
+    position: absolute;
+    background: url(../assets/ícones/calendar-03.svg) center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+select {
+  background: url(../assets/ícones/arrow-down-01.svg)
+  no-repeat calc(100% - 1rem);
 }
