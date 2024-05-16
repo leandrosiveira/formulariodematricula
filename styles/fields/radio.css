@@ -20,7 +20,7 @@ label + .radio-weapper {
   & input:focus,
   & input:hover {
     all: unset;
-    position: absolute;
+    position: absolute;/*por cima de tudo*/
     inset: 0;
   }
   
@@ -28,7 +28,7 @@ label + .radio-weapper {
     background-image: url(../assets/ícones/radio-default.svg);
     width: 1.5rem;
     height: 1.5rem;
-    position: absolute;
+    position: absolute; 
     top: .5rem;
     left: .5rem;
   }
